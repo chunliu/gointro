@@ -14,5 +14,5 @@ chunliu@microsoft.com
 
 * A Programing Language
 
-.code code/hello.go
+.play code/slowfib.go
 
