@@ -1,10 +1,10 @@
 What you should know about Go
 A brief introduction
-5 Mar 2018
 
 Chun Liu
 Senior Consultant
-chunliu@microsoft.com
+
+5 Mar 2018
 
 * Agenda
 
@@ -18,8 +18,8 @@ chunliu@microsoft.com
 
 * With below nature
 
-- Static / Compiled
-- Strongly typed with type inference 
+- Compiled
+- Statically typed with type inference 
 .code code/types.go /var x int/,/explicit conversion/
 - Garbage collection
 - Concurrency and comminucation

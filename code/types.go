@@ -4,6 +4,11 @@ import (
 	"fmt"
 )
 
+type Point struct {
+	x float64
+	y float64
+}
+
 func typeInferecne() {
 	var x int
 	x = 42
