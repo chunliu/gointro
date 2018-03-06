@@ -7,25 +7,45 @@ Senior Consultant
 5 Mar 2018
 
 * Agenda
-
 - What is Go
 
 * What is Go
+.image images/gopher.jpg _ 400
+.caption The gopher
 
 * A Programming Language
-
 .play code/slowfib.go
 
-* With below nature
-
-- Compiled
+* With features
+- Compiled to machine code
 - Statically typed with type inference 
 .code code/types.go /var x int/,/explicit conversion/
-- Garbage collection
-- Concurrency and comminucation
+- Garbage collected
+- CSP based concurrency
+- Excellent standard library
+- Great tools
 
-* The Origins of Go
+* Developed at Google and open source
+- Conceived in Sept 2007 by Robert Griesemer, Rob Pike and Ken Thompson
+.image images/GPT.png _ 512
+.caption From left: Robert Griesemer, Rob Pike and Ken Thompson. _Picture_from_internet_.
+- Officially announced in Nov 2009
+- Go 1 released in Mar 2012
+- Go 1.10 released in Feb 2017
 
-.image images/The-Origins-of-Go.png _ 600
+* With the philosophy
+*Overall*(radical)*Simplicity*
 
-_From_ [[https://www.safaribooksonline.com/library/view/the-go-programming/9780134190570/][_The_ _Go_ _Programming_ _Language_]]
+- Clean syntax and light on keywords
+- No type hierarchy, no inheritance, no exception, no generics ...
+
+*Orthogonality*
+
+- Methods can be implemented for any type
+- Structures represent data
+- Interfaces represent abstraction
+
+* Influenced by many other programming languages
+.image images/The-Origins-of-Go.png _ 650
+.caption The Origin of Go. _From_ [[https://www.safaribooksonline.com/library/view/the-go-programming/9780134190570/][_The_Go_Programming_Language_]]
+
