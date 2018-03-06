@@ -16,3 +16,10 @@ chunliu@microsoft.com
 
 .play code/slowfib.go
 
+* With below nature
+
+- Static / Compiled
+- Strongly typed with type inference 
+.code code/types.go /var x int/,/explicit conversion/
+- Garbage collection
+- Concurrency and comminucation

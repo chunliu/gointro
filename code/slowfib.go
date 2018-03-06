@@ -15,8 +15,8 @@ func fib(n int) int {
 }
 func main() {
 	fibN := make(chan int)
-	fmt.Printf("Start")
-	const n = 45
+	const n = 42
 	go getFib(n, fibN)
+	fmt.Printf("Calculation starts ... ")
 	fmt.Printf("\rFibonacci(%d) = %d\n", n, <-fibN)
 }
