@@ -12,7 +12,7 @@ Senior Consultant
 
 * What is Go
 
-* A Programing Language
+* A Programming Language
 
 .play code/slowfib.go
 
@@ -23,3 +23,9 @@ Senior Consultant
 .code code/types.go /var x int/,/explicit conversion/
 - Garbage collection
 - Concurrency and comminucation
+
+* The Origins of Go
+
+.image images/The-Origins-of-Go.png _ 600
+
+_From_ [[https://www.safaribooksonline.com/library/view/the-go-programming/9780134190570/][_The_ _Go_ _Programming_ _Language_]]
