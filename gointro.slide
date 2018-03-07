@@ -15,12 +15,12 @@ Chun Liu
 .caption The gopher
 
 * A Programming Language
-.play code/slowfib.go
+.play code/slowfib/slowfib.go
 
 * With features
 - Compiled to machine code
 - Statically typed with type inference 
-.play code/types.go /START OMIT/,/END OMIT/
+.play code/types/types.go /START OMIT/,/END OMIT/
 - Garbage collected
 - CSP based concurrency
 - Excellent standard library
@@ -36,8 +36,21 @@ Chun Liu
 
 * Why Go?
 
-* The philosophy of Go
-*Overall*(radical)*Simplicity*
+    The properties Go does have address the issues that make large-scale software development 
+    difficult.
+    -- Rob Pike 
+
+* Go was designed to solve (Google's) problems
+- Slow builds
+- Uncontrolled dependencies
+- Each programmer using a different subset of the language
+- Poor program understanding (documentation, etc.)
+- Duplication of effort
+- Cost of updates
+- Cross-language builds
+
+* With the philosophy
+*Simplicity*
 
 - Clean syntax and light on keywords
 - No type hierarchy, no inheritance, no exception, no generics ...
@@ -52,3 +65,11 @@ Chun Liu
 .image images/The-Origins-of-Go.png _ 650
 .caption The Origin of Go. _From_ [[https://www.safaribooksonline.com/library/view/the-go-programming/9780134190570/][_The_Go_Programming_Language_]]
 
+* Where and when to use Go
+
+* Go 2017 survey result
+.image images/go-survey-2017.png _ 750
+.caption _According_to_ [[https://blog.golang.org/survey2017-results][_Go_2017_Survey_Results_]]
+
+* Use cases
+- Kubernetes
