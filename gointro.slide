@@ -34,6 +34,10 @@ Chun Liu
 - Go 1 released in Mar 2012
 - Go 1.10 released in Feb 2017
 
+* Influenced by many other programming languages
+.image images/The-Origins-of-Go.png _ 650
+.caption The Origin of Go. _From_ [[https://www.safaribooksonline.com/library/view/the-go-programming/9780134190570/][_The_Go_Programming_Language_]]
+
 * Why Go?
 
     The properties Go does have address the issues that make large-scale software development 
@@ -50,20 +54,54 @@ Chun Liu
 - Cross-language builds
 
 * With the philosophy
-*Simplicity*
+- *Simplicity*
+    Clean syntax and light on keywords
+    No type hierarchy, no inheritance, no exception, no generics ...
 
-- Clean syntax and light on keywords
-- No type hierarchy, no inheritance, no exception, no generics ...
+- *Orthogonality*
+    Methods can be implemented for any type
+    Structures represent data
+    Interfaces represent abstraction
 
-*Orthogonality*
+* Simplicity
 
-- Methods can be implemented for any type
-- Structures represent data
-- Interfaces represent abstraction
+* Clean syntax and light keywords
+- 25 keywords (vs 80 keywords in C#)
+- Basic types
+    bool
+    string
+    int  int8  int16  int32  int64
+    uint uint8 uint16 uint32 uint64 uintptr
+    byte // alias for uint8
+    rune // alias for int32, represents a Unicode code point
+    float32 float64
+    complex64 complex128
+- Array, slice, struct, map
+- Pointer
+- Interface
+- Function
+- Channel
 
-* Influenced by many other programming languages
-.image images/The-Origins-of-Go.png _ 650
-.caption The Origin of Go. _From_ [[https://www.safaribooksonline.com/library/view/the-go-programming/9780134190570/][_The_Go_Programming_Language_]]
+* Only one looping construct
+- for
+    for i := 0; i < 10; i++ { sum += i }
+- "while"
+	for sum < 10 { sum += 1 }
+- "do-while"
+    for {
+        sum += 1
+        if sum > 10 { break }
+    }
+- "foreach"
+    for i, v := range collection { 
+        fmt.Println("The value of index %d is %d", i, v)
+    }
+
+* Packages: the key of fast compiling
+- Packages are like modules and namespace in C# but lightweight.
+- Package A imports package B which imports package C. The object file of B contains the link info of both B and C. 
+- Packages imported must be used.
+.play code/packages/packages.go
 
 * Where and when to use Go
 

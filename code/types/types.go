@@ -13,8 +13,8 @@ func main() {
 	// START OMIT
 	var x int
 	x = 42
-	y := 24
+	y, s := 24, "say hi"
 	var z float32 = float32(x) // explicit conversion
-	fmt.Println(x, y, z)
+	fmt.Println(x, y, z, s)
 	// END OMIT
 }
