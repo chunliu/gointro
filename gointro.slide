@@ -54,16 +54,18 @@ Chun Liu
 - Cross-language builds
 
 * With the philosophy
-- *Simplicity*
-    Clean syntax and light on keywords
-    No type hierarchy, no inheritance, no exception, no generics ...
+*Simplicity*
 
-- *Orthogonality*
-    Methods can be implemented for any type
-    Structures represent data
-    Interfaces represent abstraction
+- Lightweight syntax
+- One way to write a piece of code and minimize programmer's effort
+- One style to keep the consistance 
 
-* Simplicity
+*Orthogonality*
+
+- Methods can be implemented for any type
+- Structures represent data
+- Interfaces represent abstraction
+
 
 * Clean syntax and light keywords
 - 25 keywords (vs 80 keywords in C#)
@@ -97,11 +99,40 @@ Chun Liu
         fmt.Println("The value of index %d is %d", i, v)
     }
 
-* Packages: the key of fast compiling
+* Packages and imports: the key of fast compiling
 - Packages are like modules and namespace in C# but lightweight.
-- Package A imports package B which imports package C. The object file of B contains the link info of both B and C. 
-- Packages imported must be used.
+- Hoisting dependencies. 
+- Unused dependencies cause error at compile time.
+- No circular imports
 .play code/packages/packages.go
+
+* Radical simplicity
+- No inheritance
+- No constructors/destructors
+- No generics
+- No exceptions
+- No implicit numeric conversions
+- No operator overloading
+- And many features which are available in other programming languages
+
+* Not usual OOP - composition, not inheritance
+If C++ and Java are about type hierarchies and the taxonomy of types, Go is about composition. - Rob Pike
+.code code/composition/composition.go /composed start OMIT/,/composed end OMIT/
+.play code/composition/composition.go /main start OMIT/,/main end OMIT/
+
+* Methods can be implemented for any type
+.code code/composition/composition.go /method start OMIT/,/method end OMIT/
+
+	f := MyFloat(-math.Sqrt2)
+	fmt.Printf("The Abs of %f is %f\n", -math.Sqrt2, f.Abs())
+	v := &Vertex{10, 10}
+	fmt.Printf("The Abs of %+v is %f", v, v.Abs())
+
+* Interface 
+
+* Concurrency 
+
+* Error handling
 
 * Where and when to use Go
 
