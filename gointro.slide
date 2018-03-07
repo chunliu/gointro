@@ -2,14 +2,15 @@ What you should know about Go
 A brief introduction
 
 Chun Liu
-Senior Consultant
 
 5 Mar 2018
 
 * Agenda
-- What is Go
+- What is Go? - a brief history
+- Why Go? - the major difference 
+- Where and when to use Go? - usage scenarios
 
-* What is Go
+* What is Go?
 .image images/gopher.jpg _ 400
 .caption The gopher
 
@@ -19,7 +20,7 @@ Senior Consultant
 * With features
 - Compiled to machine code
 - Statically typed with type inference 
-.code code/types.go /var x int/,/explicit conversion/
+.play code/types.go /START OMIT/,/END OMIT/
 - Garbage collected
 - CSP based concurrency
 - Excellent standard library
@@ -33,7 +34,9 @@ Senior Consultant
 - Go 1 released in Mar 2012
 - Go 1.10 released in Feb 2017
 
-* With the philosophy
+* Why Go?
+
+* The philosophy of Go
 *Overall*(radical)*Simplicity*
 
 - Clean syntax and light on keywords

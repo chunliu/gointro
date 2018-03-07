@@ -9,10 +9,12 @@ type Point struct {
 	y float64
 }
 
-func typeInferecne() {
+func main() {
+	// START OMIT
 	var x int
 	x = 42
 	y := 24
 	var z float32 = float32(x) // explicit conversion
 	fmt.Println(x, y, z)
+	// END OMIT
 }
