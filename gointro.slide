@@ -66,7 +66,6 @@ Chun Liu
 - Structures represent data
 - Interfaces represent abstraction
 
-
 * Clean syntax and light keywords
 - 25 keywords (vs 80 keywords in C#)
 - Basic types
@@ -121,14 +120,37 @@ If C++ and Java are about type hierarchies and the taxonomy of types, Go is abou
 .play code/composition/composition.go /main start OMIT/,/main end OMIT/
 
 * Methods can be implemented for any type
-.code code/composition/composition.go /method start OMIT/,/method end OMIT/
+.code code/interfaces/interfaces.go /method start OMIT/,/method end OMIT/
 
 	f := MyFloat(-math.Sqrt2)
 	fmt.Printf("The Abs of %f is %f\n", -math.Sqrt2, f.Abs())
 	v := &Vertex{10, 10}
 	fmt.Printf("The Abs of %+v is %f", v, v.Abs())
 
-* Interface 
+* Interface: the most magical feature of Go
+- Interface is implemented implicitly
+.code code/interfaces/interfaces.go /interface start OMIT/,/interface end OMIT/
+.play code/interfaces/interfaces.go /func main/,/^}/
+
+* Interface (cont.)
+- Interface can be embedded
+
+    package io
+
+    type Reader interface {
+        Read(p []byte) (n int, err error)
+    }
+    type Writer interface {
+        Write(p []byte) (n int, err error)
+    }
+    type ReadWriter interface {
+        Reader
+        Writer
+    }
+
+* Interface (cont.)
+- Type assertion and type switch
+.play code/typeasserts/typeasserts.go /func do/,/do OMIT/
 
 * Concurrency 
 
