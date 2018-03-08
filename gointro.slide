@@ -35,8 +35,9 @@ Chun Liu
 - Go 1.10 released in Feb 2017
 
 * Influenced by many other programming languages
-.image images/The-Origins-of-Go.png _ 650
+.image images/The-Origins-of-Go.png _ 550
 .caption The Origin of Go. _From_ [[https://www.safaribooksonline.com/library/view/the-go-programming/9780134190570/][_The_Go_Programming_Language_]]
+The task of the programming language designer *"*is*consolidation*not*innovation*"*. (Hoare, 1973).
 
 * Why Go?
 
@@ -58,7 +59,7 @@ Chun Liu
 
 - Lightweight syntax
 - One way to write a piece of code and minimize programmer's effort
-- One style to keep the consistance 
+- One style (gofmt) to keep the consistance 
 
 *Orthogonality*
 
@@ -103,7 +104,7 @@ Chun Liu
 - Hoisting dependencies. 
 - Unused dependencies cause error at compile time.
 - No circular imports
-.play code/packages/packages.go
+.play -edit code/packages/packages.go
 
 * Radical simplicity
 - No inheritance
@@ -116,8 +117,7 @@ Chun Liu
 
 * Not usual OOP - composition, not inheritance
 If C++ and Java are about type hierarchies and the taxonomy of types, Go is about composition. - Rob Pike
-.code code/composition/composition.go /composed start OMIT/,/composed end OMIT/
-.play code/composition/composition.go /main start OMIT/,/main end OMIT/
+.play -edit code/composition/composition.go /type Point/,/main end OMIT/
 
 * Methods can be implemented for any type
 .code code/interfaces/interfaces.go /method start OMIT/,/method end OMIT/
@@ -127,7 +127,7 @@ If C++ and Java are about type hierarchies and the taxonomy of types, Go is abou
 	v := &Vertex{10, 10}
 	fmt.Printf("The Abs of %+v is %f", v, v.Abs())
 
-* Interface: the most magical feature of Go
+* Interface: all magic happens here
 - Interface is implemented implicitly
 .code code/interfaces/interfaces.go /interface start OMIT/,/interface end OMIT/
 .play code/interfaces/interfaces.go /func main/,/^}/
@@ -148,13 +148,21 @@ If C++ and Java are about type hierarchies and the taxonomy of types, Go is abou
         Writer
     }
 
+    // equivalent 
+    type ReadWriter interface {
+        Read(p []byte) (n int, err error)
+        Write(p []byte) (n int, err error)
+    }
+
 * Interface (cont.)
 - Type assertion and type switch
 .play code/typeasserts/typeasserts.go /func do/,/do OMIT/
 
-* Concurrency 
-
 * Error handling
+We believe that coupling exceptions to a control structure, as in the try-catch-finally idiom, results in convoluted code. -- go faq 
+.play -edit code/errors/errors.go /type Vertex/,/code end OMIT/
+
+* Concurrency: Goroutines and Channels
 
 * Where and when to use Go
 
@@ -164,3 +172,8 @@ If C++ and Java are about type hierarchies and the taxonomy of types, Go is abou
 
 * Use cases
 - Kubernetes
+
+* Resources
+- [[https://tour.golang.org/welcome/1][A Tour of Go]]
+- [[https://talks.golang.org/2015/gophercon-goevolution.slide#1][The Evolution of Go]]
+- This slide [[https://github.com/chunliu/gointro]]

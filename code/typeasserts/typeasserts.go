@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func do(i interface{}) {
-	switch v := i.(type) {
+	switch v := i.(type) { // HL
 	case int:
 		fmt.Printf("Twice %v is %v\n", v, v*2)
 	case string:
