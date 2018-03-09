@@ -19,7 +19,7 @@ func (v *Vertex) Abs() (float64, error) {
 func main() {
 	var v *Vertex
 	f, err := v.Abs()
-	if err != nil { // HL
+	if err != nil { // basic error handling // HL
 		fmt.Printf("Error: %v", err)
 		return
 	}

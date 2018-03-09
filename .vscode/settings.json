@@ -1,2 +1,4 @@
 {
+    "go.buildOnSave": "off",
+    "go.lintOnSave": "off"
 }
