@@ -10,7 +10,7 @@ https://github.com/chunliu
 * Agenda
 - What is Go? - a brief history
 - Why Go? - the major difference 
-- Where and when to use Go? - usage scenarios
+- Where and when to use Go? - is it for you and your customer?
 
 * What is Go?
 .image images/gopher.jpg _ 400
@@ -24,7 +24,7 @@ https://github.com/chunliu
 - Statically typed with type inference 
 .play code/types/types.go /START OMIT/,/END OMIT/
 - Garbage collected
-- CSP based concurrency
+- CSP style concurrency
 - Excellent standard library
 - Great tools
 
@@ -212,7 +212,14 @@ We believe that coupling exceptions to a control structure, as in the try-catch-
 .image images/go-survey-2017.png _ 750
 .caption _According_to_ [[https://blog.golang.org/survey2017-results][_Go_2017_Survey_Results_]]
 
-* Go is quickly adopted in the following areas
+* Some famous Go projects
+- Container: [[https://github.com/docker/swarm][docker swarm]], [[https://github.com/kubernetes/kubernetes][kubernetes]]
+- Blockchain: [[https://github.com/ethereum/go-ethereum][go-ethereum]]
+- Microservices: [[https://github.com/istio/istio][istio]]
+- System tools: [[https://github.com/yudai/gotty][gotty]], [[https://github.com/inconshreveable/ngrok][ngrok]]
+- Middleware: [[https://grpc.io/][GRPC]], [[https://github.com/CodisLabs/codis][codis]]
+
+* Go is impressingly adopted in the following areas
 - Cloud infra, system and server software
 - Microservices and containers
 - Web services / APIs
