@@ -26,7 +26,7 @@ Chun Liu
 - Excellent standard library
 - Great tools
 
-* Developed at Google and open source
+* Developed by Google and open source
 - Conceived in Sept 2007 by Robert Griesemer, Rob Pike and Ken Thompson
 .image images/GPT.png _ 512
 .caption From left: Robert Griesemer, Rob Pike and Ken Thompson. _Picture_from_internet_.
@@ -37,13 +37,12 @@ Chun Liu
 * Influenced by many other programming languages
 .image images/The-Origins-of-Go.png _ 550
 .caption The Origin of Go. _From_ [[https://www.safaribooksonline.com/library/view/the-go-programming/9780134190570/][_The_Go_Programming_Language_]]
-The task of the programming language designer *"*is*consolidation*not*innovation*"*. (Hoare, 1973).
+The task of the programming language designer *"is*consolidation*not*innovation"*. (Tony Hoare, the author of CSP, 1973).
 
 * Why Go?
-
-    The properties Go does have address the issues that make large-scale software development 
-    difficult.
-    -- Rob Pike 
+.image images/most-loved-wanted.png 330 _
+.caption *Most*Loved* vs. *Most*Wanted*. _Based_On_ [[https://insights.stackoverflow.com/survey/2017#most-loved-dreaded-and-wanted][_Stack_Overflow_Developer_Survey_Result_2017_]]
+Go is developed by Google!
 
 * Go was designed to solve (Google's) problems
 - Slow builds
@@ -190,16 +189,44 @@ We believe that coupling exceptions to a control structure, as in the try-catch-
         }
     }
 
-* Where and when to use Go
+* Some drawbacks
 
-* Go 2017 survey result
+    Go's purpose is not research into programming language design. Go's purpose is to make its 
+    designers' programming lives better. -- Rob Pike
+
+- Error handling
+    result or error? 2 returns but only one is useful. 
+- Dependency management
+    go get --> godep --> vendor experiment --> dep (Go 1.9) --> vgo (coming...)
+- No Generics. But Go has map, and you just can't create something like it.
+    ages := make(map[string]int)
+    graph := make(map[string]map[string]int)
+
+    go faq recogize generics since 2012, and it could come in Go 2.
+
+- Once interface{}, no static type check anymore
+
+* Where and when Go can be used
 .image images/go-survey-2017.png _ 750
 .caption _According_to_ [[https://blog.golang.org/survey2017-results][_Go_2017_Survey_Results_]]
 
-* Use cases
-- Kubernetes
+* Go is quickly adopted in the following areas
+- Cloud infra, system and server software
+- Microservices and containers
+- Web services / APIs
+- Command line interface (CLI)
+
+* Microsoft and Go
+- MS ships the best code editor for Go
+.image images/best-editor.png 256 _
+.caption _According_to_ [[https://blog.golang.org/survey2017-results][_Go_2017_Survey_Results_]]
+
+- Azure SDK for Go
+- Go tooling for Azure App Service has been retired, but Go app still can be deployed as a Linux container for Web App
+- Go app can be deployed as a container via AKS
 
 * Resources
 - [[https://tour.golang.org/welcome/1][A Tour of Go]]
-- [[https://talks.golang.org/2015/gophercon-goevolution.slide#1][The Evolution of Go]]
-- This slide [[https://github.com/chunliu/gointro]]
+- [[https://blog.golang.org/survey2017-results][Go 2017 Survey Results]]
+- [[https://talks.golang.org/][Go talks]]
+- This slide: [[https://github.com/chunliu/gointro]]

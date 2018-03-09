@@ -1,6 +1,6 @@
-package main
+package main // HL
 
-import (
+import ( // HL
 	"fmt"
 )
 
@@ -13,10 +13,10 @@ func fib(n int) int {
 	}
 	return fib(n-1) + fib(n-2)
 }
-func main() {
+func main() { // HL
 	fibN := make(chan int)
 	const n = 42
-	go getFib(n, fibN)
+	go getFib(n, fibN) // HL
 	fmt.Printf("Calculation starts ... ")
 	fmt.Printf("\rFibonacci(%d) = %d\n", n, <-fibN)
 }
