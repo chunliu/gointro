@@ -42,8 +42,8 @@ https://github.com/chunliu
 The task of the programming language designer *"is*consolidation*not*innovation"*. (Tony Hoare, the author of CSP, 1973).
 
 * Why Go?
-.image images/most-loved-wanted.png 330 _
-.caption *Most*Loved* vs. *Most*Wanted*. _Based_On_ [[https://insights.stackoverflow.com/survey/2017#most-loved-dreaded-and-wanted][_Stack_Overflow_Developer_Survey_Result_2017_]]
+.image images/most-loved-wanted-2018.png 330 _
+.caption *Most*Loved* vs. *Most*Wanted*. _Based_On_ [[https://insights.stackoverflow.com/survey/2018/#most-loved-dreaded-and-wanted][_Stack_Overflow_Developer_Survey_Result_2018_]]
 Go is developed by Google!
 
 * Go was designed to solve (Google's) problems
@@ -117,7 +117,7 @@ Go is developed by Google!
 - And many features which are available in other programming languages
 
 * Not usual OOP - composition, not inheritance
-If C++ and Java are about type hierarchies and the taxonomy of types, Go is about composition. - Rob Pike
+If C++ and Java are about type hierarchies and the taxonomy of types, Go is about composition. -- Rob Pike
 .play -edit code/composition/composition.go /type Point/,/main end OMIT/
 
 * Methods can be implemented for any type
