@@ -14,7 +14,7 @@ func fib(n int) int {
 	return fib(n-1) + fib(n-2)
 }
 func main() { // HL
-	fibN := make(chan int)
+	fibN := make(chan int) // HL
 	const n = 42
 	go getFib(n, fibN) // HL
 	fmt.Printf("Calculation starts ... ")

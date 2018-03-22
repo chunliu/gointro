@@ -24,7 +24,7 @@ https://github.com/chunliu
 - Statically typed with type inference 
 .play code/types/types.go /START OMIT/,/END OMIT/
 - Garbage collected
-- CSP style concurrency
+- Communicating Sequential Processes (CSP) style concurrency
 - Excellent standard library
 - Great tools
 
@@ -70,7 +70,7 @@ Go is developed by Google!
 
 * Clean syntax and light keywords
 - 25 keywords (vs 80 keywords in C#)
-- Basic types
+- Basic types - [[https://golang.org/pkg/builtin/]]
     bool
     string
     int  int8  int16  int32  int64
@@ -114,7 +114,7 @@ Go is developed by Google!
 - No exceptions
 - No implicit numeric conversions
 - No operator overloading
-- And many features which are available in other programming languages
+- And no many features which are available in other programming languages
 
 * Not usual OOP - composition, not inheritance
 If C++ and Java are about type hierarchies and the taxonomy of types, Go is about composition. -- Rob Pike
